@@ -1,25 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IFCD0210: Proyecto Desarrollo Web</title>
-    <script defer src="app.js"></script>
+    <script type="module" defer src="web.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Web</title>
 </head>
-
 <body>
-    <p id="parrafo" class="uno dos tres">Lorem, ipsum dolor.</p>
-    <ol>
-        <li>primer elemento</li>
-        <li>segundo elemento</li>
-        <li>tercero elemento</li>
-    </ol>
+    <div id="todo">
 
-    <form action="">
-        <input class="input" type="text" name="nombre">
-        <button type="submit">click me</button>
-    </form>
+            <header>
+                <div class="logo"><img src="/img/logo.jpg" width="40px"></div>
+                <nav>
+                    <a href="index.html">Inicio</a>
+                    <a href="products.html">Productos</a>
+                    <a href="services.html">Servicios</a>
+                    <a href="contact.html">Contacto</a>
+                </nav>
+                <button class="login-btn">Iniciar Sesión</button>
+            </header>
+
+        <div class="container">
+            <h1>Sube tu Producto!!</h1>
+            <p>Crea tu producto para que sea añadido a nuestra tienda!</p>
+            <form id="add-product-form">
+                <label for="product-name">Nombre</label>
+                <input type="text" id="product-name" name="product-name" required>
+    
+                <label for="product-price">Precio (€)</label>
+                <input type="number" id="product-price" name="product-price" step="0.01" required>
+    
+                <label for="product-category">Categoría</label>
+                <select id="product-category" name="product-category" required>
+                    <option value="">Seleccione una categoría</option>
+                    <option value="ordenadores">Ordenadores</option>
+                    <option value="perifericos">Periféricos</option>
+                    <option value="componentes">Componentes</option>
+                    <option value="accesorios">Accesorios</option>
+                    <option value="software">Software</option>
+                </select>
+    
+                <label for="product-image">Imagen del Producto</label>
+                <input type="file" id="product-image" name="product-image" accept="image/*" required>
+                
+                <label for="product-description">Descripción</label>
+                <textarea id="product-description" name="product-description" rows="4" required></textarea>
+                <br><br>
+                <button type="submit">Añadir Producto</button>
+            </form>
+        </div>
+    </div>
+    <br><br>
+    <div id="listaProductos">
+
+    </div> 
+    <br><br>
+    <div class="fade-in-text">
+        <p>Bienvenido A nuestra Tienda!!</p>
+      </div>
+      
+    <br><br>
+    <div class="pie">
+        
+        <div class="footer">
+            <p>Terminos y Condiciones</p>
+            <p>© 2024 TechStore. Todos los derechos reservados.</p>
+            
+            
+        </div>
+    </div>    
+
+    
+
+
+
+
 </body>
-
 </html>
